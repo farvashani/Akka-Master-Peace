@@ -40,7 +40,7 @@ namespace Akkamart.Identity.Server
             {
                 endpoints.MapDefaultControllerRoute();
             });
-             app.UsePathBase ("/Identity/");
+             app.UsePathBase ("/identity/");
 
             app.UseBlazor<Client.Startup>();
         }
