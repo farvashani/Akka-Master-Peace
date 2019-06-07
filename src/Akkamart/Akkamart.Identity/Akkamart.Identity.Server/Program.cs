@@ -29,8 +29,8 @@ namespace Akkamart.Identity.Server
                     .UseKestrel (
                         options => {
                             options.AddServerHeader = false;
-                            options.Listen (IPAddress.Loopback, 4001);
-                            options.Listen (IPAddress.Loopback, 4002, listenOptions => {
+                            options.Listen (IPAddress.Loopback, 4003);
+                            options.Listen (IPAddress.Loopback, 4004, listenOptions => {
                                 listenOptions.UseHttps (certificate);
                             });
                         }
