@@ -1,4 +1,10 @@
-cd Akkamart/Akkamart.Home/
+echo "========================================"
+pwd
+cd ~/Akka-Master-Peace/Akkamart/Akkamart.Home/
 sh build_docker.sh
-cd Akkamart/Akkamart.Identity/
+
+echo "========================================"
+pwd
+cd ~/Akka-Master-Peace/Akkamart/Akkamart.Identity/
 sh build_docker.sh
+echo "========================================"
