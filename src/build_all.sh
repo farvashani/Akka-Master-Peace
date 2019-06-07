@@ -2,6 +2,7 @@ echo "========================================"
 pwd
 cd Akkamart/Akkamart.Home/
 sh build_docker.sh
+cd  ../..
 
 echo "========================================"
 pwd
