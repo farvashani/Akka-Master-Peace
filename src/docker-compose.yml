@@ -27,6 +27,9 @@ services:
   nginx:
     image: nginx:1.15-alpine
     restart: unless-stopped
+    depends_on: 
+      - akkamart-identity
+      - akkamart-home
     volumes:
       - ./wwwroot:/usr/share/nginx/html
       # - ./data/blazorapp/bin/Debug/netstandard2.0/publish/BlazorApp/dist:/usr/share/nginx/html
