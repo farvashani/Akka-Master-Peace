@@ -67,5 +67,5 @@ COPY dist ./home
 WORKDIR /akkamart/home
 # Super hack to work around https://github.com/aspnet/Blazor/issues/376
 
-#ENTRYPOINT ["dotnet", "Akkamart.Home.Server.dll"]
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["dotnet", "Akkamart.Home.Server.dll"]
+# ENTRYPOINT ["tail", "-f", "/dev/null"]

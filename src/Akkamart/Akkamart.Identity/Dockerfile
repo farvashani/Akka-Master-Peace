@@ -67,5 +67,5 @@ COPY dist ./identity
 WORKDIR /akkamart/identity
 # Super hack to work around https://github.com/aspnet/Blazor/issues/376
 
-#ENTRYPOINT ["dotnet", "Akkamart.Identity.Server.dll"]
-  ENTRYPOINT ["tail", "-f", "/dev/null"]
+ENTRYPOINT ["dotnet", "Akkamart.Identity.Server.dll"]
+#   ENTRYPOINT ["tail", "-f", "/dev/null"]
