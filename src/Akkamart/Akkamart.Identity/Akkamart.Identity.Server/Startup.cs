@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Serialization;
 using System.Linq;
+using System.Net.Mime;
 
 namespace Akkamart.Identity.Server
 {
@@ -18,7 +19,7 @@ namespace Akkamart.Identity.Server
             services.AddResponseCompression(opts =>
             {
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
-                    new[] { "application/octet-stream" });
+                    new[] { MediaTypeNames.Application.Octet });
             });
         }
 
@@ -39,6 +40,7 @@ namespace Akkamart.Identity.Server
             {
                 endpoints.MapDefaultControllerRoute();
             });
+             app.UsePathBase ("/Identity/");
 
             app.UseBlazor<Client.Startup>();
         }
