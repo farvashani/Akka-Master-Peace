@@ -4,7 +4,7 @@ services:
     image: akkamart-home:${TAG:-latest}
     container_name: akkamart-home
     build:
-      context: ./akkamart/Akkamart.Home
+      context: ./Akkamart/Akkamart.Home
       dockerfile: Dockerfile
     ports:
       - "4001:4001"
@@ -12,11 +12,11 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Staging
       - ASPNETCORE_URLS=http://*:4001
-  akkamart-gatekeeper:
-    image: akkamart-gatekeeper:${TAG:-latest}
-    container_name: akkamart-gatekeeper
+  akkamart-identity:
+    image: akkamart-identity:${TAG:-latest}
+    container_name: akkamart-identity
     build:
-      context: ./akkamart/services/Akkamart.Gatekeeper/
+      context: ./Akkamart/Akkamart.Identity
       dockerfile: Dockerfile
     ports:
       - "4003:4003"

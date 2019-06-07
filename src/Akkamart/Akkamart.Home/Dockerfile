@@ -61,7 +61,7 @@ RUN wget -O PowerShell.Linux.Alpine.$POWERSHELL_VERSION.nupkg https://pwshtool.b
 
 # WORKDIR /src/app/out
 
-WORKDIR /akka.mas.ter.peace
+WORKDIR /akkamart
 COPY dist ./home
 
 WORKDIR /home/dist
