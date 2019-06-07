@@ -1,4 +1,4 @@
-cd akkamart/Akkamart.Home/
+cd Akkamart/Akkamart.Home/
 sh build_docker.sh
-cd akkamart/services/Akkamart.Gatekeeper/
+cd Akkamart/Akkamart.Identity/
 sh build_docker.sh
