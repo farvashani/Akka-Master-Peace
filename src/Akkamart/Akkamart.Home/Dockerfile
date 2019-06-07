@@ -64,8 +64,8 @@ RUN wget -O PowerShell.Linux.Alpine.$POWERSHELL_VERSION.nupkg https://pwshtool.b
 WORKDIR /akkamart
 COPY dist ./home
 
-WORKDIR /home/dist
+WORKDIR /akkamart/home
 # Super hack to work around https://github.com/aspnet/Blazor/issues/376
 
-ENTRYPOINT ["dotnet", "Akkamart.Home.Server.dll"]
-#  ENTRYPOINT ["tail", "-f", "/dev/null"]
+#ENTRYPOINT ["dotnet", "Akkamart.Home.Server.dll"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
